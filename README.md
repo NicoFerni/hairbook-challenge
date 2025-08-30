@@ -1,50 +1,145 @@
-# Welcome to your Expo app 👋
+# HairBook Credits - App de Reservas de Salones
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Una aplicación móvil para reservar citas en salones de belleza y barberías utilizando un sistema de créditos.
 
-## Get started
+## 📱 Descripción
 
-1. Install dependencies
+HairBook Credits es una aplicación que permite a los usuarios explorar diferentes salones de belleza, ver servicios disponibles, y hacer reservas utilizando créditos. La app incluye funcionalidades de búsqueda, filtrado por categorías, y un sistema de reservas interactivo.
 
+## ✨ Funcionalidades Implementadas
+
+### Funcionalidades Obligatorias ✅
+- ✅ Vista principal con todos los salones disponibles
+- ✅ Información completa de cada salón (nombre, descripción, tipo, ubicación, costo)
+- ✅ Filtrado por categorías de servicio
+- ✅ Vista detallada de cada salón
+- ✅ Sistema de reservas con simulación de botón
+- ✅ Saldo de créditos fijo inicial (20 créditos)
+- ✅ Validación y mensaje de error por créditos insuficientes
+
+### Funcionalidades Opcionales (Bonus) ✅
+- ✅ Diseño responsive para móvil
+- ✅ Confirmación visual de reserva exitosa
+- ✅ Filtro de búsqueda por nombre, ubicación y descripción
+- ✅ Animaciones y transiciones suaves
+- ✅ Sistema de calificaciones con estrellas
+- ✅ Interfaz moderna con iconos
+
+## 🛠 Tecnologías Utilizadas
+
+- **React Native** - Framework para desarrollo móvil
+- **Expo** - Plataforma de desarrollo y despliegue
+- **@expo/vector-icons** - Iconos vectoriales
+- **TypeScript** - Lenguaje de programación
+- **React Hooks** - useState, useEffect para manejo de estado
+- **Modal & ScrollView** - Componentes nativos de React Native
+
+## 🚀 Instalación y Configuración
+
+### Prerrequisitos
+- Node.js (versión 16 o superior)
+- npm o yarn
+- Expo CLI instalado globalmente
+
+### Pasos para ejecutar el proyecto
+
+1. **Instalar Expo CLI** (si no lo tienes):
    ```bash
-   npm install
+   npm install -g expo-cli
    ```
 
-2. Start the app
-
+2. **Crear el proyecto**:
    ```bash
-   npx expo start
+   npx create-expo-app HairBookCredits
+   cd HairBookCredits
    ```
 
-In the output, you'll find options to open the app in a
+3. **Instalar dependencias**:
+   ```bash
+   npm install @expo/vector-icons
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+4. **Reemplazar el contenido** de `App.js` con el código proporcionado
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+5. **Ejecutar la aplicación**:
+   ```bash
+   npm start
+   # o
+   expo start
+   ```
 
-## Get a fresh project
+6. **Ver la app**:
+   - Escanea el código QR con la app Expo Go en tu móvil
+   - O presiona 'i' para iOS simulator
+   - O presiona 'a' para Android emulator
+   - O presiona 'w' para web browser
 
-When you're ready, run:
+## 📁 Estructura del Proyecto
 
-```bash
-npm run reset-project
+```
+HairBookCredits/
+├── App.js              # Componente principal con toda la lógica
+├── package.json        # Dependencias y scripts
+├── app.json           # Configuración de Expo
+├── api.ts             # Data mockeada
+├── interfaces.ts      # Tipos y objetos tipados
+└── README.md          # Esta documentación
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🎨 Decisiones de Diseño
 
-## Learn more
+### Arquitectura
+- **Componente único**: Por simplicidad, toda la lógica está en App.js. En un proyecto más grande se separarían en componentes independientes.
+- **Estado local**: Uso de useState para manejar créditos, filtros y datos localmente.
+- **Datos estáticos**: Los datos están definidos como constantes en el código, simulando una API.
 
-To learn more about developing your project with Expo, look at the following resources:
+### UI/UX
+- **Diseño moderno**: Colores suaves, sombras, y bordes redondeados
+- **Navegación intuitiva**: Modales para detalles y confirmaciones
+- **Feedback visual**: Animaciones, cambios de estado, y confirmaciones claras
+- **Accesibilidad**: Botones grandes, contraste adecuado, textos legibles
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Funcionalidades Técnicas
+- **Filtrado múltiple**: Combinación de filtros por categoría y texto de búsqueda
+- **Validaciones**: Control de créditos insuficientes con alertas
+- **Estado reactivo**: La UI se actualiza automáticamente cuando cambia el estado
+- **Componentes reutilizables**: SalonCard y FilterChip como componentes internos
 
-## Join the community
+## 💡 Funcionalidades Destacadas
 
-Join our community of developers creating universal apps.
+1. **Sistema de Búsqueda Avanzado**: Busca por nombre, ubicación o descripción
+2. **Filtros Dinámicos**: Chips de filtro con estado visual activo/inactivo
+3. **Modal de Detalles**: Vista completa con toda la información del salón
+4. **Confirmación Animada**: Modal de éxito con iconos y animaciones
+5. **Gestión de Estado**: Control preciso de créditos y validaciones
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📱 Capturas de Funcionalidad
+
+- **Pantalla Principal**: Lista de salones con búsqueda y filtros
+- **Vista Detalle**: Modal con información completa del salón
+- **Confirmación**: Modal de éxito después de reservar
+- **Estados de Error**: Alertas cuando no hay créditos suficientes
+
+## 🚧 Posibles Mejoras Futuras
+
+- Separar componentes en archivos independientes
+- Implementar navegación con React Navigation
+- Agregar persistencia de datos con AsyncStorage
+- Integrar con APIs reales
+- Añadir autenticación de usuarios
+- Implementar sistema de notificaciones
+- Agregar mapas para ubicaciones
+- Sistema de favoritos
+- Historial de reservas
+
+## 📝 Notas Técnicas
+
+- El proyecto está optimizado para mobile-first
+- Utiliza SafeAreaView para compatibilidad con diferentes dispositivos
+- Los estilos siguen una convención consistente con colores y espaciado
+- El código está comentado para facilitar el mantenimiento
+- Se implementaron validaciones para prevenir errores de usuario
+
+---
+
+Desarrollado para el desafío HairBook Credits 
