@@ -2,6 +2,8 @@
 
 Una aplicación móvil para reservar citas en salones de belleza y barberías utilizando un sistema de créditos.
 
+https://github.com/user-attachments/assets/acf400ab-0612-47e6-8aae-cef17269204b
+
 ## 📱 Descripción
 
 HairBook Credits es una aplicación que permite a los usuarios explorar diferentes salones de belleza, ver servicios disponibles, y hacer reservas utilizando créditos. La app incluye funcionalidades de búsqueda, filtrado por categorías, y un sistema de reservas interactivo.
