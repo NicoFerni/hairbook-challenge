@@ -1,11 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Salon } from "../interfaces";
+import { SalonCardProps } from "../interfaces";
 
-interface SalonCardProps {
-  salon: Salon;
-  onPress: (salon: Salon) => void;
-}
 
 export const SalonCard = ({ salon, onPress }: SalonCardProps) => (
     <TouchableOpacity

@@ -48,28 +48,18 @@ HairBook Credits es una aplicación que permite a los usuarios explorar diferent
    npm install -g expo-cli
    ```
 
-2. **Crear el proyecto**:
-   ```bash
-   npx create-expo-app HairBookCredits
-   cd HairBookCredits
-   ```
-
-3. **Instalar dependencias**:
+2. **Instalar dependencias**:
    ```bash
    npm install @expo/vector-icons
    ```
 
-4. **Reemplazar el contenido** de `App.js` con el código proporcionado
-
-5. **Ejecutar la aplicación**:
+3. **Ejecutar la aplicación**:
    ```bash
-   npm start
-   # o
-   expo start
+   npx expo start
    ```
 
-6. **Ver la app**:
-   - Escanea el código QR con la app Expo Go en tu móvil
+4. **Ver la app**:
+   - Escanea el código QR con la app Expo Go en tu telefono
    - O presiona 'i' para iOS simulator
    - O presiona 'a' para Android emulator
    - O presiona 'w' para web browser
@@ -87,11 +77,6 @@ HairBookCredits/
 ```
 
 ## 🎨 Decisiones de Diseño
-
-### Arquitectura
-- **Componente único**: Por simplicidad, toda la lógica está en App.js. En un proyecto más grande se separarían en componentes independientes.
-- **Estado local**: Uso de useState para manejar créditos, filtros y datos localmente.
-- **Datos estáticos**: Los datos están definidos como constantes en el código, simulando una API.
 
 ### UI/UX
 - **Diseño moderno**: Colores suaves, sombras, y bordes redondeados
@@ -122,7 +107,6 @@ HairBookCredits/
 
 ## 🚧 Posibles Mejoras Futuras
 
-- Separar componentes en archivos independientes
 - Implementar navegación con React Navigation
 - Agregar persistencia de datos con AsyncStorage
 - Integrar con APIs reales
@@ -138,8 +122,5 @@ HairBookCredits/
 - Utiliza SafeAreaView para compatibilidad con diferentes dispositivos
 - Los estilos siguen una convención consistente con colores y espaciado
 - El código está comentado para facilitar el mantenimiento
-- Se implementaron validaciones para prevenir errores de usuario
 
----
 
-Desarrollado para el desafío HairBook Credits # hairbook-challenge

@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { initialData } from '../api';
 import { SalonCard } from '../components/card';
+import { FilterChip } from '../components/filter';
 import { Salon, serviceTypes } from '../interfaces';
 
 
@@ -27,16 +28,11 @@ export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [confirmationVisible, setConfirmationVisible] = useState(false);
 
-  // Filtrar salones
   useEffect(() => {
     let filtered = salons;
-
-    // Filtro por categoría
     if (selectedFilter !== "todos") {
       filtered = filtered.filter(salon => salon.type === selectedFilter);
     }
-
-    // Filtro por búsqueda
     if (searchText) {
       filtered = filtered.filter(salon =>
         salon.name.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -62,18 +58,6 @@ export default function App() {
     }
   };
 
-  
-
-  const FilterChip = ({ filter, isSelected, onPress }: { filter: string, isSelected: boolean, onPress: () => void }) => (
-    <TouchableOpacity
-      style={[styles.filterChip, isSelected && styles.filterChipSelected]}
-      onPress={onPress}
-    >
-      <Text style={[styles.filterText, isSelected && styles.filterTextSelected]}>
-        {filter}
-      </Text>
-    </TouchableOpacity>
-  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -199,7 +183,6 @@ export default function App() {
         </View>
       </Modal>
 
-      {/* Modal de confirmación */}
       <Modal
         animationType="fade"
         transparent={true}
@@ -298,28 +281,6 @@ const styles = StyleSheet.create({
   filtersContent: {
     paddingHorizontal: 20,
     paddingTop: 10,
-  },
-  filterChip: {
-    backgroundColor: '#fff',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-    marginRight: 10,
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-  },
-  filterChipSelected: {
-    backgroundColor: '#8B5CF6',
-    borderColor: '#8B5CF6',
-  },
-  filterText: {
-    fontSize: 14,
-    color: '#64748b',
-    textTransform: 'capitalize',
-  },
-  filterTextSelected: {
-    color: '#fff',
-    fontWeight: '600',
   },
   content: {
     flex: 1,
